@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    
+    <link rel="shortcut icon" href="icos/road.ico">
+    <!-- <link rel="shorcut icon" class="icon glyphicon glyphicon-road ln-shadow-logo shape-0"> -->
     <title>Comparte Tu Coche - Bienvenido a la plataforma de compartir coche</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -36,7 +35,76 @@
     </script>
     <script src="assets/js/pace.min.js"></script>
 </head>
+
+
 <body>
+    
+    <?php
+                            
+        $dato1 = array(
+                'avatar' => "./avatares/avatar1.jpg",
+                'name' => "Ismael Galán.",
+                'trayecto' => "Córdoba a Sevilla.",
+                'direccion' => "Av. América, 40.",
+                'hora' => "10:00",
+                'precio' => "10",
+                'descripcion' => "Es un trayecto corto pero tenemos que estar atentos a las indicaciones al entrar en la ciudad.",
+                'plazas' => "1"
+                );                 
+                                    
+        $dato2 = array(
+                'avatar' => "./avatares/avatar2.jpg",
+                'name' => "Moisés Higuera.",
+                'trayecto' => "Córdoba a Huelva.",
+                'direccion' => "Av. Via Parque, 25.",
+                'hora' => "11:00",
+                'precio' => "20",
+                'descripcion' => "Me gusta la buena conversación y soy prudente conduciendo.",
+                'plazas' => "4"
+                );    
+         $dato3 = array(
+                'avatar' => "./avatares/avatar3.jpg",
+                'name' => "Laura García.",
+                'trayecto' => "Sevilla a Córdoba.",
+                'direccion' => "Av. Kansas City, 15.",
+                'hora' => "08:00",
+                'precio' => "10",
+                'descripcion' => "Voy a diario a Córdoba.",
+                'plazas' => "2"
+                );                 
+                                    
+        $dato4 = array(
+                'avatar' => "./avatares/avatar4.jpg",
+                'name' => "Francisco Gutierrez.",
+                'trayecto' => "Huelva a Sevilla.",
+                'direccion' => "Calle la Bogambilla, 10.",
+                'hora' => "07:00",
+                'precio' => "13",
+                'descripcion' => "Es necesario que seais puntuales. Tengo compromisos que atender.",
+                'plazas' => "3"
+                );
+        $dato5 = array(
+                'avatar' => "./avatares/avatar5.jpg",
+                'name' => "Alfonso Garrido.",
+                'trayecto' => "Huelva a Córdoba.",
+                'direccion' => "Av. los conquistadores, 50.",
+                'hora' => "14:30",
+                'precio' => "20",
+                'descripcion' => "Voy a hacer turismo.",
+                'plazas' => "1"
+                );
+                
+        $trayectos = array(
+                        1 => $dato1,
+                        2 => $dato2,
+                        3 => $dato3,
+                        4 => $dato4,
+                        5 => $dato5
+                        );
+                        $numresultados = count($trayectos);
+                                
+    ?>
+    
 <div id="wrapper">
     <div class="header">
         <nav class="navbar   navbar-site navbar-default" role="navigation">
@@ -47,7 +115,7 @@
                             class="icon-bar"></span> <span class="icon-bar"></span></button>
                     <a href="index.html" class="navbar-brand logo logo-title">
                         <!-- Original Logo will be placed here  -->
-                        <span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo shape-0"></i> </span>
+                        <span class="logo-icon"><i class="icon glyphicon glyphicon-road ln-shadow-logo shape-0"></i> </span>
                         COMPARTE<span> TU COCHE </span> </a></div>
 
                 <!--/.nav-collapse -->
@@ -111,6 +179,7 @@
                     </aside>
                 </div>
                 
+                
                 <!--/.page-side-bar-->
                 <div class="col-sm-9 page-content col-thin-left">
                     <div class="category-list">
@@ -120,7 +189,12 @@
                             <div class="col-lg-12  box-title no-border">
                                 <div class="inner">
                                     <h2><span> Trayectos </span> publicados
-                                        <small> 1 resultado encontrado</small>
+                                        <small> 
+                                        
+                                        <!-- aqui quiero mostrar el numero de resultados -->
+                                        <?php echo $numresultados;
+                                        ?>
+                                        Resultados encontrados</small>
 
 
                                     </h2>
@@ -128,48 +202,82 @@
                             </div>
                             
                         <div class="adds-wrapper jobs-list">
-                            <div class="item-list job-item">
-
-
-                                <div class="col-sm-1  col-xs-2 no-padding photobox">
-                                    <div class="add-image"><a href=""><img class="thumbnail no-margin"
-                                                                           src="https://addons.cdn.mozilla.net/user-media/userpics/0/0/45.png?modified=1447324257"
-                                                                           alt="Avatar de Usuario"></a></div>
-                                </div>
-                                <!--/.photobox-->
-                                <div class="col-sm-10  col-xs-10  add-desc-box">
-                                    <div class="add-details jobs-item">
-                                        <h5 class="company-title"><a href="">Antonio Pérez</a></h5>
-                                        <h4 class="job-title"><a href="job-details.html"> Córdoba a Huelva </a></h4>
-                                        <span class="info-row">  <span class="item-location"><i
-                                                class="fa fa-map-marker"></i> Calle Poeta Paredes, 25 </span> <span class="date"><i
-                                                class=" icon-clock"> </i>9:00</span><span class=" salary">	<i
-                                                class=" icon-money"> </i> 10€</span></span>
-
-                                        <div class="jobs-desc">
-                                            Un viaje entretenido y seguro, no me gusta correr. Además, pararemos a mitad de camino para tomar una rica tostada de sobraasada, y luego, directos a Huelva.
+                        
+                        
+                            <?php    
+                                
+                                for ($i = 1; $i <= count($trayectos); $i = $i + 1) 
+                                {
+                                    
+                            ?>
+                        
+                                <div class="item-list job-item">
+                                          
+                                        <div class="col-sm-1  col-xs-2 no-padding photobox">
+                                            <div class="add-image"><a href=""><img class="thumbnail no-margin"
+                                                                                   src="<?php echo $trayectos[$i]['avatar'];?>"
+                                                                                   alt="Avatar de Usuario"></a></div>
                                         </div>
-
-
-                                        <div class="job-actions">
-                                            <ul class="list-unstyled list-inline">
-                                                <li>
-                                                    <span class="save-job">
-                                                        <span class="fa fa-users"></span>
-                                                        3 plazas
-                                                    </span>
-                                                </li>
-                                            </ul>
+                                        
+                                        <!-- src="https://addons.cdn.mozilla.net/user-media/userpics/0/0/45.png?modified=1447324257" -->
+                                        
+                                        <!--/.photobox-->
+                                        <div class="col-sm-10  col-xs-10  add-desc-box">
+                                            <div class="add-details jobs-item">
+                                                <h5 class="company-title"><a href=""><?php echo $trayectos[$i]['name'];?></a></h5>
+                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". ";?><?php echo $trayectos[$i]['trayecto'];?></a></h4>
+                                                <span class="info-row">  <span class="item-location"><i
+                                                        class="fa fa-map-marker"></i><?php echo " ".$trayectos[$i]['direccion'];?></span> <span class="date"><i
+                                                        class=" icon-clock"> </i><?php echo " ".$trayectos[$i]['hora'];?></span><span class=" salary">	<i
+                                                        class=" icon-money"> </i><?php echo " ".$trayectos[$i]['precio'];?>€</span></span>
+                                                
+                                                
+                                                <div class="jobs-desc">
+                                                    
+                                                    <?php echo $trayectos[$i]['descripcion'];?>
+                                                    
+                                                    
+                                                    
+                                                    <!-- recortar un parrafo en php -->
+                                                    <?php
+                                                    //$frase = "Un viaje entretenido y seguro, no me gusta correr. Además, pararemos a mitad de camino para tomar una rica tostada de sobraasada, y luego, directos a Huelva.";
+                                                    //echo $frase;
+                                                    //echo "<br>";
+                                                    //echo "<br>";
+                                                    //echo substr($frase, 0, 80) . " ...";  
+                                                    //echo "<br>";
+                                                    ?>
+                                                    
+                                                    </div>
+        
+        
+                                                    <div class="job-actions">
+                                                        <ul class="list-unstyled list-inline">
+                                                            <li>
+                                                                <span class="save-job">
+                                                                    <span class="fa fa-users"></span>
+                                                                    <?php echo $trayectos[$i]['plazas']." ";?>plazas
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                
+                                                </div>
                                         </div>
-
-
+                                        <!--/.add-desc-box-->
+        
+                                        <!--/.add-desc-box-->
                                     </div>
-                                </div>
-                                <!--/.add-desc-box-->
-
-                                <!--/.add-desc-box-->
-                            </div>
-                            <!--/.job-item-->
+                                    <!--/.job-item-->
+                            <?php
+                             }
+                            ?>
+                            
+                            
+                            
+                            
+                            
+                            
                         </div>
                     </div>    
                 </div>    
@@ -182,7 +290,16 @@
     <div class="footer" id="footer">
         <div class="container">
             <ul class=" pull-right navbar-link footer-nav">
-                <li> &copy; 2016 - development by Sopinet Software</li>
+                <li>Pruducto con fines educativos -
+                
+                    <!-- &copy; -->
+                
+                   <?php
+                    $hoy = date("Y");
+                    echo $hoy;
+                    ?>
+                    
+                    - Desarrollado por Alcalá Software</li>
             </ul>
         </div>
     </div>

@@ -38,6 +38,13 @@
 
 
 </head>
+            
+    <!-- <?php
+         $hoy = date("Y");
+         echo $hoy;
+         ?>
+         -->
+            
 <body>
 
 <div id="wrapper">
@@ -93,8 +100,50 @@
     </div>
     <!-- /.intro -->
 
+   
+    
+
     <div class="main-container">
+    
         <div class="container">
+        
+        <!-- prueba php -->
+            <?php
+            
+            date_default_timezone_set('Europe/Madrid');
+            
+            echo date('l jS \of F Y h:i:s A');
+            
+            echo "<br>";
+            
+            $nuestraCadena = "Hola Mundo ".date(Y);
+            echo $nuestraCadena;
+            
+            echo "<br>";
+            
+            substr($nuestraCadena, 5);
+            
+            
+            echo "<br>";
+            
+            // El acceso a caracteres específicos en una cadena 
+            // se puede conseguir usando "corchetes"
+            // $string = 'wolframio';
+            // echo $string[0];                 // w
+            // echo $string[3];                 // f
+            // echo $string[strlen($string)-1]; // o
+            
+            echo "<br>";
+            
+            for ($i = 1; $i <= 10; $i++) {
+            echo $i;
+            }
+            
+            // $array = array(1, 2, 3, 4, 5);
+            // print_r($array);
+            
+            ?>
+        
             <div class="row">
                 <div class="col-sm-12 page-content col-thin-right">
                     <div class="inner-box category-content">
@@ -189,9 +238,19 @@
 
 
     <div class="footer" id="footer">
+        
         <div class="container">
             <ul class=" pull-right navbar-link footer-nav">
-                <li> &copy; 2016 - development by Sopinet Software</li>
+                <li>Pruducto con fines educativos -
+                
+                    <!-- &copy; -->
+                
+                   <?php
+                    $hoy = date("Y");
+                    echo $hoy;
+                    ?>
+                    
+                    - Desarrollado por Alcalá Software</li>
             </ul>
         </div>
     </div>
