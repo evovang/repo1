@@ -44,7 +44,9 @@
         $dato1 = array(
                 'avatar' => "./avatares/avatar1.jpg",
                 'name' => "Ismael Galán.",
-                'trayecto' => "Córdoba a Sevilla.",
+              //'trayecto' => "Córdoba a Sevilla.",
+                'origen' => "Córdoba",
+                'destino' => "Sevilla",
                 'direccion' => "Av. América, 40.",
                 'hora' => "10:00",
                 'precio' => "10",
@@ -55,7 +57,9 @@
         $dato2 = array(
                 'avatar' => "./avatares/avatar2.jpg",
                 'name' => "Moisés Higuera.",
-                'trayecto' => "Córdoba a Huelva.",
+              //'trayecto' => "Córdoba a Huelva.",
+                'origen' => "Córdoba",
+                'destino' => "Huelva",
                 'direccion' => "Av. Via Parque, 25.",
                 'hora' => "11:00",
                 'precio' => "20",
@@ -65,7 +69,9 @@
          $dato3 = array(
                 'avatar' => "./avatares/avatar3.jpg",
                 'name' => "Laura García.",
-                'trayecto' => "Sevilla a Córdoba.",
+              //'trayecto' => "Sevilla a Córdoba.",
+                'origen' => "Sevilla",
+                'destino' => "Córdoba",
                 'direccion' => "Av. Kansas City, 15.",
                 'hora' => "08:00",
                 'precio' => "10",
@@ -76,7 +82,9 @@
         $dato4 = array(
                 'avatar' => "./avatares/avatar4.jpg",
                 'name' => "Francisco Gutierrez.",
-                'trayecto' => "Huelva a Sevilla.",
+              //'trayecto' => "Huelva a Sevilla.",
+                'origen' => "Huelva",
+                'destino' => "Sevilla",
                 'direccion' => "Calle la Bogambilla, 10.",
                 'hora' => "07:00",
                 'precio' => "13",
@@ -86,7 +94,9 @@
         $dato5 = array(
                 'avatar' => "./avatares/avatar5.jpg",
                 'name' => "Alfonso Garrido.",
-                'trayecto' => "Huelva a Córdoba.",
+              //'trayecto' => "Huelva a Córdoba.",
+                'origen' => "Huelva",
+                'destino' => "Córdoba",
                 'direccion' => "Av. los conquistadores, 50.",
                 'hora' => "14:30",
                 'precio' => "20",
@@ -225,7 +235,7 @@
                                         <div class="col-sm-10  col-xs-10  add-desc-box">
                                             <div class="add-details jobs-item">
                                                 <h5 class="company-title"><a href=""><?php echo $trayectos[$i]['name'];?></a></h5>
-                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". ";?><?php echo $trayectos[$i]['trayecto'];?></a></h4>
+                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". ";?><?php echo $trayectos[$i]['origen'];?> a <?php echo $trayectos[$i]['destino'];?></a></h4>
                                                 <span class="info-row">  <span class="item-location"><i
                                                         class="fa fa-map-marker"></i><?php echo " ".$trayectos[$i]['direccion'];?></span> <span class="date"><i
                                                         class=" icon-clock"> </i><?php echo " ".$trayectos[$i]['hora'];?></span><span class=" salary">	<i
