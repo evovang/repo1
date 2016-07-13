@@ -235,7 +235,7 @@
                                         <div class="col-sm-10  col-xs-10  add-desc-box">
                                             <div class="add-details jobs-item">
                                                 <h5 class="company-title"><a href=""><?php echo $trayectos[$i]['name'];?></a></h5>
-                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". ";?><?php echo $trayectos[$i]['origen'];?> a <?php echo $trayectos[$i]['destino'];?></a></h4>
+                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". " .$trayectos[$i]['origen']." a ".$trayectos[$i]['destino'];?></a></h4>
                                                 <span class="info-row">  <span class="item-location"><i
                                                         class="fa fa-map-marker"></i><?php echo " ".$trayectos[$i]['direccion'];?></span> <span class="date"><i
                                                         class=" icon-clock"> </i><?php echo " ".$trayectos[$i]['hora'];?></span><span class=" salary">	<i
