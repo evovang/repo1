@@ -4,11 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    
+    <link rel="shortcut icon" href="icos/road.ico">
     <title>Comparte Tu Coche - Bienvenido a la plataforma de compartir coche</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,9 +53,9 @@
                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span></button>
-                    <a href="index.html" class="navbar-brand logo logo-title">
+                    <a href="index.php" class="navbar-brand logo logo-title">
                         <!-- Original Logo will be placed here  -->
-                        <span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo shape-0"></i> </span>
+                        <span class="logo-icon"><i class="icon glyphicon glyphicon-road ln-shadow-logo shape-0"></i> </span>
                         COMPARTE<span> TU COCHE </span> </a>
                 </div>
                 <!--/.nav-collapse -->

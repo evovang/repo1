@@ -137,7 +137,7 @@
                     <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span></button>
-                    <a href="index.html" class="navbar-brand logo logo-title">
+                    <a href="index.php" class="navbar-brand logo logo-title">
                         <!-- Original Logo will be placed here  -->
                         <span class="logo-icon"><i class="icon glyphicon glyphicon-road ln-shadow-logo shape-0"></i> </span>
                         COMPARTE<span> TU COCHE </span> </a></div>
