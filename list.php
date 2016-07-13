@@ -105,13 +105,27 @@
                 );
                 
         $trayectos = array(
-                        1 => $dato1,
-                        2 => $dato2,
-                        3 => $dato3,
-                        4 => $dato4,
-                        5 => $dato5
+                        0 => $dato1,
+                        1 => $dato2,
+                        2 => $dato3,
+                        3 => $dato4,
+                        4 => $dato5
                         );
                         $numresultados = count($trayectos);
+        
+        
+        $trayectosFiltrados = array();
+        
+        for($i=0; $i<count($trayectos); $i=$i+1)
+        {
+            $a = $trayectos[$i]["origen"];
+            $b = $_GET["country"];
+            
+            if ($a == $b)
+            {
+                $trayectosFiltrados[] = $trayectos[$i];
+            }
+        }
                                 
     ?>
     
@@ -202,7 +216,7 @@
                                         <small> 
                                         
                                         <!-- aqui quiero mostrar el numero de resultados -->
-                                        <?php echo $numresultados;
+                                        <?php echo count($trayectosFiltrados);
                                         ?>
                                         Resultados encontrados</small>
 
@@ -216,16 +230,16 @@
                         
                             <?php    
                                 
-                                for ($i = 1; $i <= count($trayectos); $i = $i + 1) 
+                                for ($i = 0; $i < count($trayectosFiltrados); $i = $i + 1) 
                                 {
-                                    
+                                    $i2=$i +1;
                             ?>
                         
                                 <div class="item-list job-item">
                                           
                                         <div class="col-sm-1  col-xs-2 no-padding photobox">
                                             <div class="add-image"><a href=""><img class="thumbnail no-margin"
-                                                                                   src="<?php echo $trayectos[$i]['avatar'];?>"
+                                                                                   src="<?php echo $trayectosFiltrados[$i]['avatar'];?>"
                                                                                    alt="Avatar de Usuario"></a></div>
                                         </div>
                                         
@@ -234,17 +248,17 @@
                                         <!--/.photobox-->
                                         <div class="col-sm-10  col-xs-10  add-desc-box">
                                             <div class="add-details jobs-item">
-                                                <h5 class="company-title"><a href=""><?php echo $trayectos[$i]['name'];?></a></h5>
-                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i.". " .$trayectos[$i]['origen']." a ".$trayectos[$i]['destino'];?></a></h4>
+                                                <h5 class="company-title"><a href=""><?php echo $trayectosFiltrados[$i]['name'];?></a></h5>
+                                                <h4 class="job-title"><a href="job-details.html"><?php echo $i2.". " .$trayectosFiltrados[$i]['origen']." a ".$trayectosFiltrados[$i]['destino'];?></a></h4>
                                                 <span class="info-row">  <span class="item-location"><i
-                                                        class="fa fa-map-marker"></i><?php echo " ".$trayectos[$i]['direccion'];?></span> <span class="date"><i
-                                                        class=" icon-clock"> </i><?php echo " ".$trayectos[$i]['hora'];?></span><span class=" salary">	<i
-                                                        class=" icon-money"> </i><?php echo " ".$trayectos[$i]['precio'];?>€</span></span>
+                                                        class="fa fa-map-marker"></i><?php echo " ".$trayectosFiltrados[$i]['direccion'];?></span> <span class="date"><i
+                                                        class=" icon-clock"> </i><?php echo " ".$trayectosFiltrados[$i]['hora'];?></span><span class=" salary">	<i
+                                                        class=" icon-money"> </i><?php echo " ".$trayectosFiltrados[$i]['precio'];?>€</span></span>
                                                 
                                                 
                                                 <div class="jobs-desc">
                                                     
-                                                    <?php echo $trayectos[$i]['descripcion'];?>
+                                                    <?php echo $trayectosFiltrados[$i]['descripcion'];?>
                                                     
                                                     
                                                     
@@ -266,7 +280,7 @@
                                                             <li>
                                                                 <span class="save-job">
                                                                     <span class="fa fa-users"></span>
-                                                                    <?php echo $trayectos[$i]['plazas']." ";?>plazas
+                                                                    <?php echo $trayectosFiltrados[$i]['plazas']." ";?>plazas
                                                                 </span>
                                                             </li>
                                                         </ul>
