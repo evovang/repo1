@@ -119,9 +119,10 @@
         for($i=0; $i<count($trayectos); $i=$i+1)
         {
             $a = $trayectos[$i]["origen"];
-            $b = $_GET["country"];
+            $b = $trayectos[$i]["destino"];
+            $c = $_GET["country"];
             
-            if ($a == $b)
+            if ($c == $a or $c == $b)
             {
                 $trayectosFiltrados[] = $trayectos[$i];
             }
@@ -151,19 +152,21 @@
 
     <div class="search-row-wrapper"
          style="background-image: url(images/jobs/ibg.jpg); background-size: cover; background-position: center center;">
+        <form name="search" action="list.php" method="GET">
         <div class="container text-center">
             <div class="col-sm-3 col-sm-offset-3">
-                <select class="form-control" name="category" id="search-category">
+                <select class="form-control" name="country" id="search-category">
                     <option selected="selected" value="">Localidad</option>
-                    <option value="111">Huelva</option>
-                    <option value="111">Cordoba</option>
-                    <option value="111">Sevilla</option>
+                    <option value="Huelva">Huelva</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Sevilla">Sevilla</option>
                 </select>    
             </div>
             <div class="col-sm-3">
                 <button class="btn btn-block btn-primary"> Buscar trayectos <i class="fa fa-search"></i></button>
             </div>
         </div>
+    </form>
     </div>    
 
     <div class="main-container inner-page">
