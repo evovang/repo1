@@ -40,7 +40,10 @@
 <body>
     
     <?php
-                            
+        
+        include 'Trayecto.php';               
+        
+        
         $dato1 = array(
                 'avatar' => "./avatares/avatar1.jpg",
                 'name' => "Ismael Galán.",
