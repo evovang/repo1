@@ -1,0 +1,26 @@
+{%extends "base.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+    Bienvenidos......
+{% endblock %}
+
+{% block intro %}
+    {{ include("index/intro.html.twig") }}
+{% endblock %}
+
+{% block contenido %}
+
+    {% block maincontainer %}
+        {{ include("index/maincontainer.html.twig") }}
+    {% endblock %}
+
+    {% block pageinfo %}
+        {{ include("index/pageinfo.html.twig") }}
+    {% endblock %}
+    
+    {% block pagebottoninfo %}
+        {{ include("index/pagebottoninfo.html.twig") }}
+    {% endblock %}
+
+{% endblock %}

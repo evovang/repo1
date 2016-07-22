@@ -1,0 +1,31 @@
+<html>
+    
+    {% block head %}
+    <head>
+        <meta charset="utf-8">
+            {% block css %}
+                <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            {% endblock %}
+        
+            {% block title %}
+                <title>Comparte Tu Coche - Bienvenido a la plataforma de compartir coche</title>
+            {% endblock %}
+    </head>
+    {% endblock %}
+    
+    
+    {% block body %}
+    <body>
+        {% block b1 %}
+            <div>Bloque 1</div>
+        {% endblock %}
+        {% block b2 %}
+            <div>Bloque 2</div>
+        {% endblock %}
+        {% block b3 %}
+            <div>Bloque 3</div>
+        {% endblock %}
+    </body>
+    {% endblock %}
+    
+</html>
