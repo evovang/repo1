@@ -128,7 +128,7 @@
     <div class="search-row-wrapper"
          style="background-image: url(images/jobs/ibg.jpg); background-size: cover; background-position: center center;">
         <div class="container text-center">
-            <form name="filter" action="list.php" method="GET">
+            <form name="filter" action="main.php" method="GET">
                 <input type="hidden" name="posted" value="<?php echo $_GET["posted"];?>"/>
                 <div class="col-sm-3 col-sm-offset-3">
                     <select class="form-control" name="country" id="country">
